@@ -7,7 +7,8 @@ class ProvideResult(object):
 
     @staticmethod
     def get_final_result(input_dict: dict) -> str:
-        p = fuzzification.Pa_fuzzification()
-        print(p.chest_pain(1) , "******^^^&&&")
-        return "salam"
-        # pass
+        print(input_dict)
+        p = fuzzification.H_fuzzification()
+        print(p.return_fuzzy_numbers(input_dict) , "******^^^&&&")
+        pass
+
