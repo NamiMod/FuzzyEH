@@ -176,14 +176,11 @@ class H_fuzzification:
 
         return [low, medium , high]
 
-    # return blood_sugar_value
+    # return [true, false]
     def blood_sugar(self,x):
-        if x <=105:
-            return 0
         if x >=120:
-            return 1
-        if x > 105 and x < 120 :
-            return (((1/15)*(x - 105)))
+            return [1,0]
+        return [0,1]
 
     # return [bp_low, bl_medium, bp_high, bp_very_high]
     def blood_pressure(self,x):

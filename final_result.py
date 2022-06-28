@@ -1,4 +1,5 @@
 import fuzzification
+import inference
 class ProvideResult(object):
     def __new__(cls):
         if not hasattr(cls, 'instance'):
@@ -9,6 +10,8 @@ class ProvideResult(object):
     def get_final_result(input_dict: dict) -> str:
         print(input_dict)
         p = fuzzification.H_fuzzification()
-        print(p.return_fuzzy_numbers(input_dict) , "******^^^&&&")
+        q = inference.H_Inference()
+        t = p.return_fuzzy_numbers(input_dict)
+        print(q.inference(t) , "******^^^&&&")
         pass
 
